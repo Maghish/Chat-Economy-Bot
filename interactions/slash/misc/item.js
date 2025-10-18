@@ -13,7 +13,7 @@ const log = new Logger({ keepSilent: true });
 
 // Deconstructed the constants we need in this file.
 
-const { SlashCommandBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
 
 const manager = require('../../../functions/database');
