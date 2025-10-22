@@ -4,6 +4,11 @@
 /database
 .prettierignore
 
+# Lock files
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
 # Logs
 logs
 *.log
