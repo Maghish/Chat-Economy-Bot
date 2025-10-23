@@ -8,7 +8,7 @@
 // Deconstructed the constants we need in this file.
 
 const { EmbedBuilder } = require('discord.js');
-const { SlashCommandBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder } = require('discord.js');
 
 const random = require('../../../functions/get/random-number');
 const manager = require('../../../functions/database');
