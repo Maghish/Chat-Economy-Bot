@@ -17,7 +17,10 @@ module.exports = {
 	async execute(message) {
 		const noOfTokens = Math.floor(Math.random() * 5) + 1;
 
-		const baseEmbedDescription = `Press the button below to claim ${noOfTokens}x <:nyarucoin1:1431573207592341664>!`;
+		// Insert the event token emoji here
+		const EVENT_TOKEN_EMOJI = '';
+
+		const baseEmbedDescription = `Press the button below to claim ${noOfTokens}x ${EVENT_TOKEN_EMOJI}!`;
 
 		const embed = new Discord.EmbedBuilder()
 			.setTitle('Happy Halloween!')
@@ -25,9 +28,6 @@ module.exports = {
 			.setFooter({
 				text: 'Winner will be randomly picked from the button pressed players',
 			});
-		// .setThumbnail(
-		// 	'https://cdn.discordapp.com/emojis/1428819849198702773.png',
-		// );
 
 		const row = new Discord.ActionRowBuilder().addComponents(
 			new Discord.ButtonBuilder()
@@ -118,7 +118,7 @@ module.exports = {
 					if (pressed.length === 1) {
 						embed.setDescription(
 							baseEmbedDescription +
-								`\n> **<@${winner}> claimed ${noOfTokens}x <:nyarucoin1:1431573207592341664>**`,
+								`\n> **<@${winner}> claimed ${noOfTokens}x ${EVENT_TOKEN_EMOJI}**`,
 						);
 					} else {
 						const nonWinners =
@@ -133,7 +133,7 @@ module.exports = {
 
 						embed.setDescription(
 							baseEmbedDescription +
-								`\n> **<@${winner}> fought off against ${nonWinners} and claimed ${noOfTokens}x <:nyarucoin1:1431573207592341664>**`,
+								`\n> **<@${winner}> fought off against ${nonWinners} and claimed ${noOfTokens}x ${EVENT_TOKEN_EMOJI}**`,
 						);
 					}
 
