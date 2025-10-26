@@ -17,7 +17,6 @@ const { SlashCommandBuilder } = require('discord.js');
 
 const manager = require('../../../functions/database');
 const { EmbedBuilder } = require('discord.js');
-const { discordSort } = require('discord.js');
 
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
